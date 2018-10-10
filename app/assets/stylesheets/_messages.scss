@@ -1,0 +1,26 @@
+.main-center {
+  background-color: #eeeeee;
+  height: calc(100% - 142px);
+  padding: 46px 40px 0 40px;
+  @include clearfix() ;
+  &__group {
+    word-break: break-all;
+    &--name {
+      float: left;
+      margin-right: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      color: $black;
+    }
+    &--date {
+      color: $gray;
+      font-size: 12px;
+      padding-bottom: 10px;
+    }
+    &--message {
+      color: $black;
+      font-size: 14px;
+      padding-bottom: 40px;
+    }
+  }
+}

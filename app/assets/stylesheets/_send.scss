@@ -1,0 +1,39 @@
+.main-bottom {
+  background-color: #AAAAAA;
+  height: 95px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  @include clearfix() ;
+  &__text {
+    background-color: $white;
+    height: 50px;
+    width: calc(100% - 180px);
+    margin: 20px 0px 20px 40px;
+    line-height: 50px;
+    display: inline-block;
+    float: left;
+    @include clearfix() ;
+    &--message {
+      display: inline-block;
+      color: $black;
+      padding-left: 10px;
+      font-size: 16px;
+    }
+    &--icon {
+      display: inline-block;
+      padding-right: 10px;
+      font-size: 16px;
+      float: right;
+    }
+  }
+  &__send {
+    color: $white;
+    background-color: $light-blue;
+    float:left;
+    padding: 0 20px;
+    margin: 20px 40px 20px 15px;
+    text-align: center;
+    line-height: 50px;
+  }
+}
