@@ -1,0 +1,31 @@
+%body
+  .notice
+    チャットグループが作成されました
+  .contents
+    .sidebar
+      .sidebar-top
+        .sidebar-top__nickname
+          shoma
+        .sidebar-top__icon
+          = fa_icon'edit'
+          = fa_icon'gear'
+      .sidebar-bottom
+        = render partial: "select"
+    .main
+      .main-top
+        .main-top__name
+          sampleグループ
+        .main-top__edit
+          Edit
+        .main-top__member
+          Member : shoma
+      .main-center
+        = render partial: "messages"
+      .main-bottom
+        .main-bottom__text
+          .main-bottom__text--message
+            type a message
+          .main-bottom__text--icon
+            = fa_icon'image'
+        .main-bottom__send
+          Send

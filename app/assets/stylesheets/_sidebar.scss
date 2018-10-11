@@ -1,0 +1,35 @@
+.sidebar-top {
+  background-color: #253141;
+  height: 96px;
+  font-size: 16px;
+  font-weight: bold;
+
+  &__nickname {
+    padding: 35px 20px;
+    letter-spacing: 3px;
+    display: inline-block;
+  }
+
+  &__icon {
+    display: inline-block;
+    float: right;
+    padding: 35px 20px;
+    font-size: 20px;
+  }
+}
+
+.sidebar-bottom {
+  height: calc(100% - 96px);
+  &__group {
+    padding: 0px 20px;
+    word-break: break-all;
+    &--name {
+      font-size: 15px;
+      padding:20px 0 5px;
+    }
+    &--message {
+      font-size: 11px;
+      padding-bottom: 20px;
+    }
+  }
+}
