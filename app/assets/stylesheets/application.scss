@@ -1,9 +1,9 @@
-@import "./reset";
+@import "./config/reset";
 @import "./mixin/clearfix";
 @import "font-awesome";
-@import "./variable";
-@import "./chats";
-@import "./sidebar";
-@import "./main-top";
-@import "./messages";
-@import "./send";
+@import "./config/variable";
+@import "./modules/chats";
+@import "./modules/sidebar";
+@import "./modules/main-top";
+@import "./modules/messages";
+@import "./modules/send";
