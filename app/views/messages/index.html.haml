@@ -5,10 +5,12 @@
     .sidebar
       .sidebar-top
         .sidebar-top__nickname
-          shoma
+          = current_user.name
         .sidebar-top__icon
-          = fa_icon'edit'
-          = fa_icon'gear'
+          = link_to do
+            = fa_icon'edit', class: 'icon'
+          = link_to edit_user_path(current_user) do
+            = fa_icon'gear', class: 'icon'
       .sidebar-bottom
         = render partial: "select"
     .main
