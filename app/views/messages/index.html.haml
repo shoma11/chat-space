@@ -11,13 +11,13 @@
           Edit
         .main-top__member
           Member : shoma
-      .main-center
+      .messages
         = render partial: "messages"
-      .main-bottom
-        .main-bottom__text
-          .main-bottom__text--message
-            type a message
-          .main-bottom__text--icon
-            = fa_icon'image'
-        .main-bottom__send
-          Send
+      .form
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'form__submit'

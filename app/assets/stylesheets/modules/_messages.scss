@@ -1,23 +1,23 @@
-.main-center {
+.messages {
   background-color: #eeeeee;
-  height: calc(100% - 142px);
+  height: calc(100% - 100px - 90px - 20px);
   padding: 46px 40px 0 40px;
   @include clearfix() ;
-  &__group {
+  .message {
     word-break: break-all;
-    &--name {
+    &__user-name{
       float: left;
       margin-right: 10px;
       font-weight: bold;
       font-size: 16px;
       color: $black;
     }
-    &--date {
+    &__date {
       color: $gray;
       font-size: 12px;
       padding-bottom: 10px;
     }
-    &--message {
+    &__content {
       color: $black;
       font-size: 14px;
       padding-bottom: 40px;
