@@ -1,39 +1,36 @@
-.main-bottom {
-  background-color: #AAAAAA;
-  height: 95px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  @include clearfix() ;
-  &__text {
-    background-color: $white;
-    height: 50px;
-    width: calc(100% - 180px);
-    margin: 20px 0px 20px 40px;
-    line-height: 50px;
-    display: inline-block;
-    float: left;
-    @include clearfix() ;
-    &--message {
-      display: inline-block;
-      color: $black;
-      padding-left: 10px;
-      font-size: 16px;
+.form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
     }
-    &--icon {
-      display: inline-block;
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
       padding-right: 10px;
-      font-size: 16px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $light_blue;
+      border: none;
+      color: $white;
       float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
     }
   }
-  &__send {
-    color: $white;
-    background-color: $light-blue;
-    float:left;
-    padding: 0 20px;
-    margin: 20px 40px 20px 15px;
-    text-align: center;
-    line-height: 50px;
-  }
-}
+
