@@ -19,14 +19,6 @@ body {
   @include clearfix() ;
 }
 
-.sidebar {
-  background-color: #2f3e51;
-  height: 100%;
-  width: 300px;
-  color: $white;
-  display: inline-block;
-}
-
 .main {
   height: 100%;
   width: calc(100% - 300px);
