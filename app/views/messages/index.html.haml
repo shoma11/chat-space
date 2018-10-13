@@ -2,17 +2,7 @@
   .notice
     チャットグループが作成されました
   .contents
-    .sidebar
-      .sidebar-top
-        .sidebar-top__nickname
-          = current_user.name
-        .sidebar-top__icon
-          = link_to do
-            = fa_icon'edit', class: 'icon'
-          = link_to edit_user_path(current_user) do
-            = fa_icon'gear', class: 'icon'
-      .sidebar-bottom
-        = render partial: "select"
+    = render partial: "select"
     .main
       .main-top
         .main-top__name

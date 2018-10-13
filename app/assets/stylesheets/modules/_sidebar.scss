@@ -1,35 +1,48 @@
-.sidebar-top {
-  background-color: #253141;
-  height: 96px;
-  font-size: 16px;
-  font-weight: bold;
-
-  &__nickname {
-    padding: 35px 20px;
-    letter-spacing: 3px;
-    display: inline-block;
-  }
-
-  &__icon {
-    display: inline-block;
-    float: right;
-    padding: 35px 20px;
-    font-size: 20px;
-  }
-}
-
-.sidebar-bottom {
-  height: calc(100% - 96px);
-  &__group {
-    padding: 0px 20px;
-    word-break: break-all;
-    &--name {
-      font-size: 15px;
-      padding:20px 0 5px;
+.side-bar {
+  box-sizing: border-box;
+  color: $white;
+  height: 100%;
+  width: 300px;
+  float: left;
+  .header {
+    background-color: $side_blue_dark;
+    height: 96px;
+    line-height: 100px;
+    padding: 0 20px;
+    &__name {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
     }
-    &--message {
-      font-size: 11px;
-      padding-bottom: 20px;
+    &__lists {
+      display: inline-block;
+      float: right;
+      .list {
+        display: inline-block;
+      }
+      .icon {
+        color: $white;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .groups {
+    background-color: $side_blue_light;
+    height: calc(100vh - 96px);
+    padding: 0 20px;
+    .group {
+      box-sizing: border-box;
+      padding: 20px 0 40px;
+      &__name {
+        color: $white;
+        font-size: 15px;
+      }
+      &__message {
+        color: $white;
+        font-size: 15px;
+        margin-top: 5px;
+      }
     }
   }
 }
