@@ -10,7 +10,9 @@
         .main-top__edit
           Edit
         .main-top__member
-          Member : shoma
+          Member :
+          - @group.members.each do |member|
+            = member.user.name
       .messages
         = render @messages
       .form
