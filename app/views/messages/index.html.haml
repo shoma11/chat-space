@@ -10,9 +10,11 @@
         .main-top__edit
           Edit
         .main-top__member
-          Member : shoma
+          Member :
+          - @group.members.each do |member|
+            = member.user.name
       .messages
-        = render partial: "messages"
+        = render @messages
       .form
         = form_for [@group, @message] do |f|
           = f.text_field :content, class: 'form__message', placeholder: 'type a message'
