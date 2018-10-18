@@ -29,5 +29,16 @@ $(function(){
       processData: false,
       contentType: false
     })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.messages').append(html);
+      $('.form__message').val('');
+      $('.hidden').val('');
+      $('.form__submit').attr("disabled",false);
+      $('.messages').animate({scrollTop: $(".messages")[0].scrollHeight }, 'fast');
+    })
+    .fail(function(data){
+      alert('入力してください');
+    })
   })
 })
