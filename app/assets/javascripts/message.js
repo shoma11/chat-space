@@ -2,7 +2,7 @@ $(function(){
   // HTMLを作成するメソッド
   function buildHTML(message){
     var image_url = (message.image_url)? `<image class="message_image" src="${message.image_url}">`:"";
-    var html = `<div class="message" id='${message.id}'>
+    var html = `<div class="message" data-message-id="${message.id}">
                   <div class="message__user-name">
                   ${message.name}
                   </div>
@@ -40,6 +40,38 @@ $(function(){
     })
     .fail(function(data){
       alert('入力してください');
+      $(".form__submit").attr("disabled",false);
     })
   })
+  // 自動更新機能
+  $(function(){
+  setInterval(autoUpdate, 3000);
+  });
+  function autoUpdate() {
+    var url = window.location.href;
+    if (url.match(/\/groups\/\d+\/messages/)) {
+      var message_id = $('.message').last().data('message-id');
+        $.ajax({
+        url: url,
+        type: 'GET',
+        data: { id: message_id },
+        dataType: 'json'
+      })
+      .done(function(messages) {
+        if (messages.length !== 0) {
+          messages.forEach(function(message) {
+          var html = buildHTML(message);
+            $('.messages').append(html);
+            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight }, 'fast');
+          });
+        }
+      })
+      .fail(function() {
+        alert('自動更新に失敗しました');
+      })
+    }
+    else {
+      clearInterval(autoUpdate);
+      }
+  };
 })
