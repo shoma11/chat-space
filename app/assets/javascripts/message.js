@@ -2,7 +2,7 @@ $(function(){
   // HTMLを作成するメソッド
   function buildHTML(message){
     var image_url = (message.image_url)? `<image class="message_image" src="${message.image_url}">`:"";
-    var html = `<div class="message" id='${message.id}'>
+    var html = `<div class="message" data-message-id="${message.id}">
                   <div class="message__user-name">
                   ${message.name}
                   </div>
